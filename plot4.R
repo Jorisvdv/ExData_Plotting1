@@ -1,5 +1,4 @@
 library(data.table)
-#library(lubridate)
 # Check if data file exists in working directory
 if (!(file.exists("household_power_consumption.zip")|file.exists("household_power_consumption.txt"))) {
 download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip","household_power_consumption.zip")}
@@ -30,7 +29,7 @@ with(household.subset,
      {plot(DateTime, Sub_metering_1, type="l", ylab="Energy Submetering", xlab="")
 lines(DateTime, Sub_metering_2, type="l", col="red")
 lines(DateTime, Sub_metering_3, type="l", col="blue")})
-legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), lty=c(1,1), col=c("black","red","blue"))
+legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), lty= 1, col=c("black","red","blue"))
 
 #Plot Voltage
 plot(Voltage ~ DateTime, data = household.subset, type="l",xlab="datetime",ylab="Voltage")

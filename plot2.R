@@ -1,5 +1,4 @@
 library(data.table)
-#library(lubridate)
 # Check if data file exists in working directory
 if (!(file.exists("household_power_consumption.zip")|file.exists("household_power_consumption.txt"))) {
 download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip","household_power_consumption.zip")}
